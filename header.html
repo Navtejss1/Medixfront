@@ -5,23 +5,24 @@
         <ul>
             <li><a href="homepage.html">Home</a></li>
             <li><a href="#" id="aboutUsBtn" class="about-btn">About Us</a></li>
-            <li class="ddropdown"><a href="#">
+            <li class="ddropdown"><a href="Doctors.html">
                 Departments</a>
                 </button>
                 <div class="ddropdown-content">
-                  <a href="Orthopedic Doctor.html">&nbsp;Orthopedic Doctor&nbsp;</a>
-                  <a href="ENT Specialist.html">&nbsp;ENT Specialist&nbsp;</a>
-                  <a href="Dermatologist.html">&nbsp;Dermatologist&nbsp;</a>
-                  <a href="General Practitioner.html">&nbsp;General Practitioner&nbsp;</a>
-                  <a href="Pediatrician.html">&nbsp;Pediatrician&nbsp;</a>
-                  <a href="Gynecologist.html">&nbsp;Gynecologist&nbsp;</a>
-                
-              </div>
+                    <a href="Orthopedic Doctor.html">&nbsp;Orthopaedics&nbsp;</a>
+                    <a href="ENT Specialist.html">&nbsp;ENT &nbsp;</a>
+                    <a href="Dermatologist.html">&nbsp;Dermatology&nbsp;</a>
+                    <a href="General Practitioner.html">&nbsp;General Practice&nbsp;</a>
+                    <a href="Pediatrician.html">&nbsp;Pediatrics&nbsp;</a>
+                    <a href="Gynecologist.html">&nbsp;Gynecology&nbsp;</a>
+                  
+                </div>
                   </li>
             <li><a href="#">News</a></li>
             <li><a href="#">Book Appointment</a></li>
-            <li><a href="#">Articles</a></li>  
-            <li><a href="homepage.html#CONTACTUS">Contact Us</a></li>    
+            <li><a href="homepage.html#Health metricss">Health Metrics</a></li> 
+            <li><a href="#">Articles</a></li>     
+            <li><a href="#">Chat With Us</a></li>    
         </ul>
     </nav>
     <div class="user-dropdown">
@@ -32,25 +33,52 @@
         <div class="dropdown-content" id="dropdownMenu">
             <a href="#profile">Profile</a>
             <a href="#settings">Settings</a>
-            <a href="#logout">Logout</a>
+            <a href="#" id="logoutbtn" class="logout-btn" onclick="showLogoutPopup()">Logout</a> <!-- Added onclick event -->
         </div>
     </div>
+
+       <!-- Logout Confirmation Popup -->
+<div id="logoutConfirmation" class="popupOverlay">
+    <div class="popupContent">
+        <span class="closePopup" onclick="closeLogoutConfirmation()">&times;</span>
+        <h2>Are you sure you want to logout?</h2>
+        <button onclick="closeLogoutConfirmation()">Cancel</button>
+        <button onclick="window.location.href='logout.html'">Yes</button>
+    </div>
+</div>
+
       <!-- Popup structure for About Us -->
       <div id="aboutPopup" class="popupAbt">
         <div class="popupAbt-content">
             <span class="close">&times;</span>
             <h1>About Medix</h1><p>
-            <h4>Revolutionizing Healthcare Access and Efficiency</h4><br>
+           <br> <h3>Revolutionizing Healthcare Access and Efficiency</h3><br>
                 At Medix, we are dedicated to transforming the way clinics in India operate by eliminating outdated manual processes. Our goal is to enhance patient care, streamline administrative tasks, and create a seamless healthcare experience for everyone.<br>
-            <h4>The Problem: Outdated Systems in Healthcare</h4><br>
+            <br><h3>The Problem: Outdated Systems in Healthcare</h3><br>
                 Many clinics across India still rely on manual processes, which lead to inefficiencies that affect both patients and clinic staff. These traditional methods delay access to care, increase the risk of medical errors, and limit patient autonomy over their own health information.<br>
-            <h4>Why Choose Medix?</h4><br>
-            <h7>Innovative Technology: </h7>We leverage cutting-edge technology to create a seamless healthcare experience for both patients and providers.<br>
-            <h7>Patient-Centric Approach:</h7>Our solutions are designed with the patient in mind, ensuring easy access to healthcare information and services.<br>
-            <h7>Streamlined Operations:</h7>By digitizing administrative tasks, we enable clinics to focus on what matters most—patient care.<br>
-            <h4>Join Us in Revolutionizing Healthcare</h4><br>
+            <br><h3>Why Choose Medix?</h3><br>
+            <u><h4>-Innovative Technology: </h4></u>We leverage cutting-edge technology to create a seamless healthcare experience for both patients and providers.<br>
+            <u><h4>-Patient-Centric Approach:</h4></u>Our solutions are designed with the patient in mind, ensuring easy access to healthcare information and services.<br>
+            <h4>-Streamlined Operations:</h4>By digitizing administrative tasks, we enable clinics to focus on what matters most—patient care.<br>
+           <br> <h3>Join Us in Revolutionizing Healthcare</h3><br>
             At Medix, we believe that every patient deserves timely and accurate healthcare. Join us on our mission to enhance the healthcare experience in India through innovation and technology. This structure not only highlights the key issues and solutions but also presents your company as a forward-thinking leader in the healthcare sector.<br>
-                   
+              <hr>
+            <h3>Our Team</h3><br> 
+            <div style="display: flex; align-items: center;">
+                <!-- Left Division -->
+                <div style="display: flex; align-items: center; margin-right: 20px;">
+                  <img src="static/profile-pic.png" width="70" height="70" alt="Backend Developer">
+                  <span style="margin-left: 10px;">Backend Developer<br>Anshita Arya</span>
+                </div>
+              
+                <!-- Right Division -->
+                <div style="display: flex; align-items: center;">
+                  <img src="static/profile-pic(1).png" width="70" height="70" alt="Frontend Developer">
+                  <span style="margin-left: 10px;">Frontend Developer<br>Navtej Singh</span>
+                </div>
+              </div>
+              
+                 
             </p>
         </div>
     </div>
@@ -167,7 +195,7 @@
             }
             
             .user-button {
-                background-color: #e4431e; /* Green */
+                background-color: #536dfe; 
                 color: white;
                 padding: 10px 20px;
                 border: none;
@@ -181,7 +209,7 @@
             }
             
             .user-button:hover {
-                background-color: #7a1505; /* Darker green */
+                background-color: #7100a9; /* Darker green */
             }
             
             .dropdown-content {
@@ -305,7 +333,7 @@
                       
             /* pop up about me section*/
             .popupAbt {
-                padding-top: 100px;
+                padding-top: 10px;
                 position: fixed;
                 top: 0;
                 padding-left: 30px;
@@ -328,7 +356,7 @@
                 border: 1px solid #828282; /* Dark blue border */
                 padding: 40px;
                 border-radius: 10px;
-                text-align: center;
+                text-align: left;
                  /* Maximum width */
             }
 
@@ -442,6 +470,69 @@
                 background-color: #00ffcc; /* Change background on hover */
                 color: #333; /* Change text color on hover */
             }
+
+            
+         /*     logout Popup overlay     */
+         .popupOverlay {
+                padding-top: 250px;
+                padding-left: 450px;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 1000; /* Ensure it's on top */
+                display: none; /* Hidden by default */
+}
+
+/* Popup content */
+.popupContent {
+                box-shadow: 0 10px 900px rgba(50, 238, 255, 0.755);
+                justify-content: center;
+                justify-items: center;
+                background-color:rgb(53, 1, 138);
+                padding: 40px;
+                border-radius: 10px;
+                text-align: center;
+                width: 60%; /* Width of the popup */
+               
+            }
+
+/* Close button */
+.closePopup {
+    color: #fff9f9;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.closePopup:hover, .closePopup:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Button styles */
+.popupContent button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.popupContent button:nth-of-type(1) {
+    background-color: #ccc;
+}
+
+.popupContent button:nth-of-type(2) {
+    background-color: #f44336; /* Red color for the "Yes" button */
+    color: white;
+}
 </style>
 
 <script>

@@ -130,4 +130,22 @@ let isMouseDown = false;
 
 let startX, scrollLeft;
 /* Review Section Styling */
+  
 
+
+/*       logut      */
+function showLogoutPopup() {
+    document.getElementById('logoutConfirmation').style.display = 'block';
+}
+
+function closeLogoutConfirmation() {
+    document.getElementById('logoutConfirmation').style.display = 'none';
+}
+
+// Optional: Close the popup if the user clicks outside of it
+window.onclick = function(event) {
+    var popup = document.getElementById('logoutConfirmation');
+    if (event.target == popup) {
+        closeLogoutConfirmation();
+    }
+}

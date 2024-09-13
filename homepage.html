@@ -16,25 +16,26 @@
         <nav class="navbar"> 
             <img src="static/logo.png" alt="Logo" class="logo">
             <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="homepage.html">Home</a></li>
                 <li><a href="#" id="aboutUsBtn" class="about-btn">About Us</a></li>
-                <li class="ddropdown"><a href="#">
+                <li class="ddropdown"><a href="Doctors.html">
                     Departments</a>
                     </button>
                     <div class="ddropdown-content">
-                      <a href="Orthopedic Doctor.html">&nbsp;Orthopedic Doctor&nbsp;</a>
-                      <a href="ENT Specialist.html">&nbsp;ENT Specialist&nbsp;</a>
-                      <a href="Dermatologist.html">&nbsp;Dermatologist&nbsp;</a>
-                      <a href="General Practitioner.html">&nbsp;General Practitioner&nbsp;</a>
-                      <a href="Pediatrician.html">&nbsp;Pediatrician&nbsp;</a>
-                      <a href="Gynecologist.html">&nbsp;Gynecologist&nbsp;</a>
+                      <a href="Orthopedic Doctor.html">&nbsp;Orthopaedics&nbsp;</a>
+                      <a href="ENT Specialist.html">&nbsp;ENT &nbsp;</a>
+                      <a href="Dermatologist.html">&nbsp;Dermatology&nbsp;</a>
+                      <a href="General Practitioner.html">&nbsp;General Practice&nbsp;</a>
+                      <a href="Pediatrician.html">&nbsp;Pediatrics&nbsp;</a>
+                      <a href="Gynecologist.html">&nbsp;Gynecology&nbsp;</a>
                     
                   </div>
                       </li>
                 <li><a href="#">News</a></li>
                 <li><a href="#">Book Appointment</a></li>
-                <li><a href="#">Articles</a></li>  
-                <li><a href="#CONTACTUS">Contact Us</a></li>    
+                <li><a href="#Health metricss">Health Metrics</a></li> 
+                <li><a href="#">Articles</a></li>     
+                <li><a href="#">Chat With Us</a></li>    
             </ul>
         </nav>
         <div class="user-dropdown">
@@ -45,14 +46,27 @@
             <div class="dropdown-content" id="dropdownMenu">
                 <a href="#profile">Profile</a>
                 <a href="#settings">Settings</a>
-                <a href="#logout">Logout</a>
+                <a href="#" id="logoutbtn" class="logout-btn" onclick="showLogoutPopup()">Logout</a> <!-- Added onclick event -->
             </div>
         </div>
+
+        <!-- Logout Confirmation Popup -->
+<div id="logoutConfirmation" class="popupOverlay">
+    <div class="popupContent">
+        <span class="closePopup" onclick="closeLogoutConfirmation()">&times;</span>
+       <hr> <h2>Are you sure you want to logout?</h2><hr>
+        <button onclick="closeLogoutConfirmation()">Cancel</button>
+        <button onclick="window.location.href='logout.html'">Yes</button><hr>
+    </div><hr>
+</div>
+
+
     </header>
     
     <marquee behavior="scroll" direction="left">
-        Book an Appointment with doctor Momo Arya!
+        Avail 20% OFF on Booking Your Appointment Online Today!
     </marquee>
+
 
     <!-- Popup structure for About Us -->
     <div id="aboutPopup" class="popupAbt">
@@ -65,18 +79,34 @@
                 Many clinics across India still rely on manual processes, which lead to inefficiencies that affect both patients and clinic staff. These traditional methods delay access to care, increase the risk of medical errors, and limit patient autonomy over their own health information.<br>
             <br><h3>Why Choose Medix?</h3><br>
             <u><h4>-Innovative Technology: </h4></u>We leverage cutting-edge technology to create a seamless healthcare experience for both patients and providers.<br>
-            <u>h4>-Patient-Centric Approach:</h4></u><Our solutions are designed with the patient in mind, ensuring easy access to healthcare information and services.<br>
+            <u><h4>-Patient-Centric Approach:</h4></u>Our solutions are designed with the patient in mind, ensuring easy access to healthcare information and services.<br>
             <h4>-Streamlined Operations:</h4>By digitizing administrative tasks, we enable clinics to focus on what matters most—patient care.<br>
            <br> <h3>Join Us in Revolutionizing Healthcare</h3><br>
             At Medix, we believe that every patient deserves timely and accurate healthcare. Join us on our mission to enhance the healthcare experience in India through innovation and technology. This structure not only highlights the key issues and solutions but also presents your company as a forward-thinking leader in the healthcare sector.<br>
-                   
+              <hr>
+            <h3>Our Team</h3><br> 
+            <div style="display: flex; align-items: center;">
+                <!-- Left Division -->
+                <div style="display: flex; align-items: center; margin-right: 20px;">
+                  <img src="static/profile-pic.png" width="70" height="70" alt="Backend Developer">
+                  <span style="margin-left: 10px;">Backend Developer<br>Anshita Arya</span>
+                </div>
+              
+                <!-- Right Division -->
+                <div style="display: flex; align-items: center;">
+                  <img src="static/profile-pic(1).png" width="70" height="70" alt="Frontend Developer">
+                  <span style="margin-left: 10px;">Frontend Developer<br>Navtej Singh</span>
+                </div>
+              </div>
+              
+                 
             </p>
         </div>
     </div>
     <style>
     
     .popupAbt {
-    padding-top: 60px;
+    padding-top: 10px;
     position: fixed;
     top: 0;
     left: 0;
@@ -159,45 +189,102 @@
 
 
     <hr><div class="heading-gridcontainer">
-        <h1>Our Services</h1>
+        <h1>OUR SERVICES</h1>
     </div>
 
     <section class="grid-container">
-        <div class="box box1">
-            <h2>Box 1</h2>
-            <p>service </p>
-        </div>
-        <div class="box box2">
-            <h2>Box 2</h2>
-            <p>service </p>
-        </div>
-        <div class="box box3">
-            <h2>Box 3</h2>
-            <p>service </p>
-        </div>
+        <a href="Labs&Diagnostics.html" class="box box1">
+            <div class="box-content">
+                <img src="static/labs.png" alt="Lab Services" class="box-image">
+                <div class="box-text">
+                    <h2>Lab & Diagnostics</h2><hr>
+                    <p>We provide advanced imaging and testing, including X-rays, blood tests, and ECGs.</p>
+                </div>
+            </div>
+        </a>
+        <a href="preventic care.html" class="box box2">
+            <div class="box-content">
+                <img src="static/preventive.png" alt="Preventive Care" class="box-image">
+                <div class="box-text">
+                    <h2>Preventive Care</h2><hr>
+                    <p>Vaccinations, Vision & Hearing Tests, Blood Monitoring and Routine Examinations</p>
+                </div>
+            </div>
+        </a>
+        <a href="Homecare Services.html" class="box box3">
+            <div class="box-content">
+                <img src="static/Homecare Services.png" alt="Homecare Services" class="box-image">
+                <div class="box-text">
+                    <h2>Homecare Services</h2><hr>
+                    <p>Ambulance, Skilled Medical Staff & Swift Emergency Response</p>
+                </div>
+            </div>
+        </a>
     </section>
+    
+    <section class="grid-container2">
+        <a href="health workshops.html" class="box box4">
+            <div class="box-content">
+                <img src="static/Mental Wellness.png" alt="Health Workshops" class="box-image">
+                <div class="box-text">
+                    <h2>Health Workshops</h2><hr>
+                    <p> Mental Wellness, Women’s Health, Physical Fitness and First Aid</p>
+                </div>
+            </div>
+        </a>
+        <a href="Nutritional Counseling.html" class="box box5">
+            <div class="box-content">
+                <img src="static/Nutrition Consultation.png" alt="Nutritional Counseling" class="box-image">
+                <div class="box-text">
+                    <h2>Nutritional Counseling</h2><hr>
+                    <p>Helping individuals of all ages make healthier food choices & nutritional guidance.</p>
+                </div>
+            </div>
+        </a>
+        <a href="appointment shedulling service.html" class="box box6">
+            <div class="box-content">
+                <img src="static/Appointment Scheduling.png" alt="Appointment Scheduling" class="box-image">
+                <div class="box-text">
+                    <h2>Appointment Scheduling</h2><hr>
+                    <p>Save Time with Easy Booking and Convenient Access Anytime, from Anywhere</p>
+                </div>
+            </div>
+        </a>
+    </section>
+   <!-- Health Metrics Section --> 
+    
+   <div class="red-background" id ="Health metricss">
+    <h1 class="section-heading" style="margin-top: 30px;">HEALTH METRICS</h1>
+</div>
 
-    <section class="grid-container">
-        <div class="box box4">
-            <h2>Box 4</h2>
-            <p>service </p>
+    <div id="health-metrics-container">
+       
+        <a href="Calorie Counter.html" class="health-metric-link">
+        <div class="health-metric-box" id="metric1">
+            <img src="static/kcal.png" style="width: 250px; height: 250px;">
+            <p><h1>CALORIE COUNTER</h1></p>
         </div>
-        <div class="box box5">
-            <h2>Box 5</h2>
-            <p>service </p>
+    </a>
+    <a href="BMI calculator.html" class="health-metric-link">
+        <div class="health-metric-box" id="metric2">
+            <img src="static/bmi.png"style="width: 250px; height: 250px;">
+            <p><h1>BODY MASS INDEX</h1></p>
         </div>
-        <div class="box box6">
-            <h2>Box 6</h2>
-            <p>service </p>
+    </a>
+        <a href="Period calculator.html" class="health-metric-link">
+        <div class="health-metric-box" id="metric3">
+            <img src="static/period.png"style="width: 250px; height: 250px;">
+            <p><h1>PERIOD TRACKER</h1></p>
         </div>
-    </section>
-<hr>
-    <section class="scrollable-section">
-        <h1 class="section-heading">PATIENT FEEDBACKS</h1>
+    </a>
+    </div>
+
+    <section class="scrollable-section"><hr>
+        <h1 class="section-heading">PATIENT FEEDBACKS</h1><hr>
         <div class="scrollable-container">
-            <div class="flex-box box1"><p>The General Practitioner at the clinic is thorough and attentive. They listen carefully to concerns and provide clear, practical advice. The clinic is well-organized, and the staff is helpful. A great choice for primary care.<br><br>★★★★☆
+            <div class="flex-box box1"><p>Dr.Amrit at the clinic is thorough and attentive. They listen carefully to concerns and provide clear, practical advice. The clinic is well-organized, and the staff is helpful. A great choice for primary care.<br><br>★★★★☆
             </p></div>
-            <div class="flex-box box2"><p>The Orthopedic Doctor iscompassionate. They provide accurate diagnoses and effective treatments for joint and bone issues. recommended for orthopedic care.<br><br>★★★★★
+            <div class="flex-box box2"><p>Doctor Sharma is compassionate. They provide accurate diagnoses and effective treatments for joint and bone issues. recommended for orthopedic care.<br><br>★★★★★
                </p></div>
             <div class="flex-box box3"><p>
                 "I can't thank you enough for the special, excellent care you have provided and the unique gift you are to your patients" Thank you so much for the great care and surgery you performed on me. And also thanks to the kind staff.<br><br>★★★★☆
@@ -209,12 +296,12 @@
                 Dr.Mohit Sachdeva is fantastic with kids! Knowledgeable, patient, and caring. Always takes time to listen and explain. Our children love her, and we trust her completely. Highly recommend !.<br><br>★★★★★
             </p></div>
             <div class="flex-box box6"><p>
-                The ENT Specialistis highly experienced and compassionate. They take the time to explain the diagnosis and treatment options clearly.the staff is supportive. Highly recommended for ENT issues.<br><br>★★★★☆
+                Dr. Gulati is highly experienced and compassionate. They take the time to explain the diagnosis and treatment options clearly.the staff is supportive. Highly recommended for ENT issues.<br><br>★★★★☆
             </p></div>
              <!-- Duplicate Boxes for Loop -->
-             <div class="flex-box box1"><p>The General Practitioner at the clinic is thorough and attentive. They listen carefully to concerns and provide clear, practical advice. The clinic is well-organized, and the staff is helpful. A great choice for primary care.<br><br>★★★★☆
+             <div class="flex-box box1"><p>Dr. Amrit at the clinic is thorough and attentive. They listen carefully to concerns and provide clear, practical advice. The clinic is well-organized, and the staff is helpful. A great choice for primary care.<br><br>★★★★☆
              </p></div>
-             <div class="flex-box box2"><p>The Orthopedic Doctor iscompassionate. They provide accurate diagnoses and effective treatments for joint and bone issues. recommended for orthopedic care.<br><br>★★★★★
+             <div class="flex-box box2"><p>Doctor Sharma is compassionate. They provide accurate diagnoses and effective treatments for joint and bone issues. recommended for orthopedic care.<br><br>★★★★★
                 </p></div>
              <div class="flex-box box3"><p>
                  "I can't thank you enough for the special, excellent care you have provided and the unique gift you are to your patients" Thank you so much for the great care and surgery you performed on me. And also thanks to the kind staff.<br><br>★★★★☆
@@ -226,8 +313,8 @@
                 Dr.Mohit Sachdeva is fantastic with kids! Knowledgeable, patient, and caring. Always takes time to listen and explain. Our children love her, and we trust her completely. Highly recommend !.<br><br>★★★★★
              </p></div>
              <div class="flex-box box6"><p>
-                 The ENT Specialistis highly experienced and compassionate. They take the time to explain the diagnosis and treatment options clearly.the staff is supportive. Highly recommended for ENT issues.<br><br>★★★★☆
-             </p></div>
+                 Dr.Gulati is highly experienced and compassionate. They take the time to explain the diagnosis and treatment options clearly.the staff is supportive. Highly recommended for ENT issues.<br><br>★★★★☆
+             </p></div><hr>
             </section>
              
           <div class="ContactUs" id="CONTACTUS">
@@ -277,3 +364,4 @@
 
 </body>
 </html>
+
